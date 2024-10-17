@@ -90,9 +90,9 @@ public class ProcessoControllerTest {
         // Teste adicionar um réu ao processo
         mockMvc.perform(patch("/processos/InserirReu")
                         .param("numero_processo", "123456789")
-                        .param("nome", "João Silva"))
+                        .param("nome", "João Doe"))
                 .andExpect(status().isOk())
-                .andExpect(content().string(containsString("João Silva")));
+                .andExpect(content().string(containsString("João Doe")));
     }
 
 }

@@ -16,7 +16,7 @@ public class Reu {
 
     @ManyToOne
     @JoinColumn(name = "processo_id", nullable = false)
-    @JsonManagedReference // Adicionado para evitar loops de referenciação
+    @JsonBackReference
     private Processo processo;
 
     // Getters e Setters

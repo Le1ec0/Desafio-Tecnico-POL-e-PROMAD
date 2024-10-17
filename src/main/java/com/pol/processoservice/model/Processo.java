@@ -14,8 +14,8 @@ public class Processo {
     @Column(name = "numero_processo", nullable = false)
     private String numeroProcesso;
 
-    @OneToMany(mappedBy = "processo", fetch = FetchType.LAZY)
-    @JsonManagedReference // Adicionado para evitar loops de referenciação
+    @OneToMany(mappedBy = "processo", cascade = CascadeType.ALL)
+    @JsonManagedReference
     private List<Reu> reus;
 
     // Getters e Setters
