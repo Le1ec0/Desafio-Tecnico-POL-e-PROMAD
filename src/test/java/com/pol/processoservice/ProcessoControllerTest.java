@@ -81,18 +81,14 @@ public class ProcessoControllerTest {
 
     // Teste para adicionar um réu a um processo
     @Test
+    @Transactional
     public void testAdicionarReu() throws Exception {
-        // Primeiro, crie um processo
-        mockMvc.perform(post("/processos/Criar")
-                        .param("numero_processo", "123456789"))
-                .andExpect(status().isCreated());
-
-        // Teste adicionar um réu ao processo
         mockMvc.perform(patch("/processos/InserirReu")
                         .param("numero_processo", "123456789")
-                        .param("nome", "João Doe"))
+                        .param("nome", "João Doe")
+                        .contentType(MediaType.APPLICATION_JSON)
+                        .characterEncoding("UTF-8"))
                 .andExpect(status().isOk())
                 .andExpect(content().string(containsString("João Doe")));
     }
-
 }
