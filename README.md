@@ -54,9 +54,13 @@ Senha: leandro
 As credenciais estão no arquivo `application.properties`.
 
 O arquivo para importação e utilização dos endpoints está na raiz do projeto com o nome de `Processos.postman_collection.json`.
+
 Para listar os processos utilize o endpoint http://localhost:8080/processos/Listar
+
 Para criar um novo processo utilize o endpoint http://localhost:8080/processos/Criar?numero_processo=12 (utilizando 12 como o número do novo processo, à exemplo)
+
 Para deletar um processo existente utilize o endpoint http://localhost:8080/processos/Deletar?numero_processo=12 (utilizando 12 como o número do processo existente, à exemplo)
+
 Para adicionar um réu à um processo utilize o endpoint http://localhost:8080/processos/InserirReu?numero_processo=12453453&nome=leandro (utilizando 12 como o número do processo existente e o nome leandro, à exemplo)
 
 ## 📫 Contribuindo para o <Desafio POL e PROMAD>
