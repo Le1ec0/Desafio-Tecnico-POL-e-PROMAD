@@ -1,0 +1,123 @@
+{
+	"info": {
+		"_postman_id": "76159449-496e-4920-9702-5b0823dd537a",
+		"name": "Processos",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21348995"
+	},
+	"item": [
+		{
+			"name": "Processos",
+			"item": [
+				{
+					"name": "Listar Processos",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/processos/Listar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"processos",
+								"Listar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Criar um Processo",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/processos/Criar?numero_processo=12",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"processos",
+								"Criar"
+							],
+							"query": [
+								{
+									"key": "numero_processo",
+									"value": "12"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deletar um Processo",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/processos/Deletar?numero_processo=12",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"processos",
+								"Deletar"
+							],
+							"query": [
+								{
+									"key": "numero_processo",
+									"value": "12"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Adicionar Réu a um Processo",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/processos/InserirReu?numero_processo=12453453&nome=leandro",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"processos",
+								"InserirReu"
+							],
+							"query": [
+								{
+									"key": "numero_processo",
+									"value": "12453453"
+								},
+								{
+									"key": "nome",
+									"value": "leandro"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
