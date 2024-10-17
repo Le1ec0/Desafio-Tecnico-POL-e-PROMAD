@@ -83,12 +83,17 @@ public class ProcessoControllerTest {
     @Test
     @Transactional
     public void testAdicionarReu() throws Exception {
+        // Primeiro, cria um processo no banco de dados
+        Processo processo = new Processo();
+        processo.setNumeroProcesso("123456789");
+        processoRepository.save(processo); // Supondo que você tenha o processoRepository injetado no teste
+
         mockMvc.perform(patch("/processos/InserirReu")
                         .param("numero_processo", "123456789")
                         .param("nome", "João Doe")
                         .contentType(MediaType.APPLICATION_JSON)
                         .characterEncoding("UTF-8"))
                 .andExpect(status().isOk())
-                .andExpect(content().string(containsString("João Doe")));
+                .andExpect(jsonPath("$.nome").value("João Doe")); // Usando jsonPath para verificar o valor
     }
 }
