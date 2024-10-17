@@ -19,7 +19,7 @@ Antes de começar, verifique se você atendeu aos seguintes requisitos:
 - Você instalou a versão mais recente de `<SDK Java / PostgreSQL / Postman>`
 - Você tem uma máquina `<Windows>`.
 
-## 🚀 Instalando <Desafio POL e PROMAD>
+## 🚀 Instalando
 
 Para executar o <Desafio POL e PROMAD>, siga estas etapas:
 
@@ -27,7 +27,7 @@ Windows:
 
 Instale o Java SDK, PostgreSQL e o Postman.
 
-## ☕ Usando <Desafio POL e PROMAD>
+## ☕ Usando
 
 Para executar o projeto <Desafio POL e PROMAD>, siga estas etapas:
 
@@ -39,7 +39,7 @@ CREATE DATABASE processo_db;
 
 ```
 
-Para executar a API navegue para a pasta "processo-service" e execute o comando:
+Para executar a API navegue para a pasta "Desafio Técnico POL e PROMAD" e execute o comando:
 
 ```
 
@@ -48,20 +48,25 @@ mvn spring-boot:run
 ```
 
 OBS: As credenciais para acesso ao banco são:
+
 Usuário: postgres
 Senha: leandro
 
 As credenciais estão no arquivo `application.properties`.
 
 O arquivo para importação e utilização dos endpoints está na raiz do projeto com o nome de `Processos.postman_collection.json`.
+
 Para listar os processos utilize o endpoint http://localhost:8080/processos/Listar
+
 Para criar um novo processo utilize o endpoint http://localhost:8080/processos/Criar?numero_processo=12 (utilizando 12 como o número do novo processo, à exemplo)
+
 Para deletar um processo existente utilize o endpoint http://localhost:8080/processos/Deletar?numero_processo=12 (utilizando 12 como o número do processo existente, à exemplo)
+
 Para adicionar um réu à um processo utilize o endpoint http://localhost:8080/processos/InserirReu?numero_processo=12453453&nome=leandro (utilizando 12 como o número do processo existente e o nome leandro, à exemplo)
 
-## 📫 Contribuindo para o <Desafio POL e PROMAD>
+## 📫 Contribuindo para o projeto
 
-Para contribuir com <Desafio POL e PROMAD>, siga estas etapas:
+Para contribuir com o projeto, siga estas etapas:
 
 1. Faça um fork este repositório.
 2. Crie um branch: `git checkout -b <nome_branch>`.
