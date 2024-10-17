@@ -39,7 +39,7 @@ CREATE DATABASE processo_db;
 
 ```
 
-Para executar a API navegue para a pasta "processo-service" e execute o comando:
+Para executar a API navegue para a pasta "Desafio Técnico POL e PROMAD" e execute o comando:
 
 ```
 
